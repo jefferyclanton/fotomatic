@@ -8,7 +8,6 @@ html {
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
-  background-image: url(./resources/images/banner-landingpage.jpg);
 }
 
 .center {
@@ -26,7 +25,11 @@ html {
 }
 
 .image-container img {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 65%;
+  width: 90%;
+  padding: 32px 32px 40px 32px;
 }
 
 @media only screen and (max-width: 760px) {
@@ -235,6 +238,7 @@ header .mobile {
   font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
+  padding-top: 40px;
 }
 
 .feature h3 {
@@ -274,6 +278,7 @@ header .mobile {
 #filters-section {
   padding: 4rem 0;
   background-color: #4a4a4a;
+  height: 35rem;
 }
 
 #filters-section .content {
@@ -295,8 +300,15 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: flex;
   max-width: 100%;
   padding: 0 1%;
+}
+
+.images-container img {
+  width: auto;
+  margin: 0 0;
+  padding: 0 0;
 }
 
 @media only screen and (max-width: 760px) {
@@ -333,19 +345,21 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 #quotes-section content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
-  padding-right: 1.875rem;
-  font-family: "Palatino", serif;
-  font-size: 1.875rem;
-  line-height: 1.1;
-  font-style: italic;
-  color: #4a4a4a;
+.quote {
+    color: #4a4a4a;
+    font-size: 30px;
+    font-family: Palatino;
+    font-style: italic;
+    line-height: 1.1;
+    padding-right: 30px;
 }
 
 #quotes-section quote-citation {
@@ -379,11 +393,16 @@ footer {
 footer .content {
   color: white;
   display: flex;
-  font-size: .75rem;
+  padding-left: 32px;
 }
 
 footer .copyright {
   flex-grow: 1;
+  font-size: 12px;
+}
+
+footer .location {
+  font-size: 12px;
 }
 
 @media only screen and (min-width: 760px) {
